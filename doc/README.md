@@ -3,9 +3,9 @@
 ## 项目与仓库地址
 
 - 本地 Git 仓库：`file:///G:/桌面/高级软件开发技术`
-- 远程 GitHub/Gitee 地址：当前工作区没有配置远程仓库；待补充实际远程地址后，可在此行替换。
+- 远程 GitHub 地址：[https://github.com/withtst/svg-editor-cli](https://github.com/withtst/svg-editor-cli)
 
-当前仓库已经用 Git 管理，并保留了分步提交和最终 `final` tag 所需的提交结构。远程地址没有凭空填写：执行 `gh auth status` 显示本机 GitHub 凭据已失效，因此本阶段只能完成本地提交，不能代表用户创建或推送到远程仓库。
+当前仓库已经用 Git 管理，并保留了分步提交和最终 `final` tag 所需的提交结构。
 
 ## 运行方式
 
@@ -135,7 +135,7 @@ MODEL --> SHARED
 3. 手工回放典型流程图时发现 Windows 路径放在引号中会被 tokenizer 吞掉反斜杠；随后把反斜杠处理改为只转义引号和反斜杠，普通路径分隔符保持原样。
 4. 手工验证 `ungroup` 时发现测试场景把容器放在 SVG 根层，和题目明确的“禁止解散根级容器”冲突；保留实现的规则，并把测试改为先将容器放入父容器。
 5. 读写 round-trip 验证了缺失 id 自动补全、warning、嵌套分组、中文文本和 XML 转义；随后补充了 redo 栈清空和 IO 后禁止 undo 的测试。
-6. 检查 Git 环境时发现当前目录原本不是仓库，且本机 GitHub CLI 的 token 已失效。因此初始化了本地 Git 仓库，但没有冒用账号或猜测远程仓库地址。
+6. 检查 Git 环境时发现当前目录原本不是仓库，且本机 GitHub CLI 的 token 已失效；在确认项目名并由用户提供远程地址后，再配置 `origin` 并执行推送。
 
 ## 一致性自查
 
