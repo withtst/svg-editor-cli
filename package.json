@@ -1,0 +1,21 @@
+{
+  "name": "svg-editor-cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Object-oriented TypeScript CLI SVG editor for Lab1 Phase 1",
+  "type": "module",
+  "bin": {
+    "svg-editor": "dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "cli": "npm run build && node dist/main.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "check": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
